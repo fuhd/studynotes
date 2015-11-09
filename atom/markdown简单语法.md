@@ -105,7 +105,7 @@ markdown支持两种形式的链接语法：行内式和参考式。链接文字
 
 要建立一个行内式的链接，只要在方括号后面紧接着圆括号并插入网址链接即可：
 
-`This is [an example](http://www.baidu.com) inline link!`
+    This is [an example](http://www.baidu.com) inline link!
 
 显示为：
 
@@ -113,7 +113,7 @@ This is [an example](http://www.baidu.com) inline link!
 
 如果你是要链接到同样主机的资源，你可以使用相对路径：
 
-`See my [About](/About/) page for details.`
+    See my [About](/About/) page for details.
 
 显示为：
 
@@ -121,8 +121,8 @@ This is [an example](http://www.baidu.com) inline link!
 
 参考式的链接是在链接文字的括号后面再接上另一个方括号，而在第二个方括号里面要填入用以辨识链接的标记：
 
-` This is [an example][id] reference-style link.`
-` [id]: http://www.baidu.com/ `
+    This is [an example][id] reference-style link.
+    [id]: http://www.baidu.com/
 
 显示为：
 
