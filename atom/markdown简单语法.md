@@ -117,7 +117,7 @@ This is [an example](http://www.baidu.com) inline link!
 
 显示为：
 
-This is [an example](http://www.baidu.com) inline link!
+See my [About](/About/) page for details.
 
 参考式的链接是在链接文字的括号后面再接上另一个方括号，而在第二个方括号里面要填入用以辨识链接的标记：
 
