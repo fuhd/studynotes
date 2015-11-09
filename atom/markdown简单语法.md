@@ -139,12 +139,11 @@ markdown使用两种方式标记图片：行内式和参考式。
 #### 3.2 代码块
 如果有一整块代码需要包围，可以使用两个```包括代码，例如：
 
-```
-x = 0
-x = 2 + 2
-what is x
-```
-
+    ```
+    x = 0
+    x = 2 + 2
+    what is x
+    ``
 #### 3.2 语法高亮
 代码块可以使用语法高亮！！在你的代码块中添加一个可选的语言标识符。示例：
     ```ruby
@@ -152,15 +151,21 @@ what is x
     markdown = Redcarpet.new(¨Hello World!¨)
     puts markdown.to_html
     ```
+显示为：
+```ruby
+require ´redcarpet´
+markdown = Redcarpet.new(¨Hello World!¨)
+puts markdown.to_html
+```
 能够支持的语法可以从 [这里](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml) 这里获得。
 
 #### 3.3 表格
 你可以创建表格，通过符号（-）分开第一行和其他行，通过（|）分开各个列：
 
-`First Header|second Header`
-`------------|-------------`
-`Content Cell|Content Cell`
-`Content Cell|Content Cell`
+    First Header|second Header
+    ------------|-------------
+    Content Cell|Content Cell
+    Content Cell|Content Cell
 
 显示为：
 
