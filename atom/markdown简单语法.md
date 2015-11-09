@@ -254,14 +254,16 @@ puts markdown.to_html
 #### 3.3 表格
 你可以创建表格，通过符号（-）分开第一行和其他行，通过（|）分开各个列：
 
-    `First Header|second Header
-    ------------|-------------
-    Content Cell|Content Cell
-    Content Cell|Content Cell`
+```
+First Header|second Header
+------------|--------------
+Content1    |Content2
+Co1         |C2
+```
 
 显示为：
 
 First Header|second Header
-------------|-------------
-Content Cell|Content Cell
-Content Cell|Content Cell
+----------- |-------------
+Content1    |Content2
+Co1         |C2
