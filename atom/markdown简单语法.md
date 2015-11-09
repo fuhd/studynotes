@@ -1,4 +1,4 @@
-ATOM的markdown语法
+atom的markdown语法
 ===================
 ### 1. 区块元素
 #### 1.1 标题
@@ -51,13 +51,26 @@ markdown支持两种形式的链接语法：行内式和参考式。链接文字
 
 要建立一个行内式的链接，只要在方括号后面紧接着圆括号并插入网址链接即可：
 
+`This is [an example](http://www.baidu.com) inline link!`
+
+显示为：
+
 This is [an example](http://www.baidu.com) inline link!
 
 如果你是要链接到同样主机的资源，你可以使用相对路径：
 
-See my [About](/About/) page for details.
+`See my [About](/About/) page for details.`
+
+显示为：
+
+This is [an example](http://www.baidu.com) inline link!
 
 参考式的链接是在链接文字的括号后面再接上另一个方括号，而在第二个方括号里面要填入用以辨识链接的标记：
+
+` This is [an example][id] reference-style link.`
+` [id]: http://www.baidu.com/ `
+
+显示为：
 
 This is [an example][id] reference-style link.
 [id]: http://www.baidu.com/
@@ -65,6 +78,93 @@ This is [an example][id] reference-style link.
 #### 2.2 强调
 用两个星号或两个下划线包起来表示粗体，用一个星号或一个下划线包起来表示斜体。
 
-**这个示例表示粗体**
+`**这个示例表示粗体**` 显示为： **这个示例表示粗体**
 
-_这个示例表示斜体_
+`_这个示例表示斜体_` 显示为：_这个示例表示斜体_
+
+#### 2.3 代码
+如果要标记一小段行内代码，你可以反引号把它包起来（｀），例如：
+
+User the `printf()` function.
+
+如果要在代码区段内插入反引号，你可以用多个反引号来开启和结束代码区段：
+
+``There is a literal backtick (`) here.``
+
+代码区段的起始和结束端都可以放入一个空白，起始端后面一个，结束端前面一个，这样你就可以在区段的一开
+始就插入反引号：
+
+`` ` ``
+
+`` `javascript` ``
+
+在代码区段内，& 和 尖括号都会被自动地转成HTML实体，这使得插入HTML原始码变得很容易：
+
+Please don´t use any `<blink>` tags.
+
+#### 2.4 图片
+markdown使用两种方式标记图片：行内式和参考式。
+
+**行内式：**
+`![示例图片1](images/img1.jpg)`
+
+显示为：
+
+![示例图片1](images/img1.jpg)
+
+一个惊叹号!；接着一个方括号[]，里面放上图片的替代文字；接着一个圆括号（），里面放上图片地址。
+
+**参考式：**
+
+`![示例图片2][imgid1]`
+
+`[imgid1]: images/img2.jpg`
+
+显示为：
+
+![示例图片2][imgid1]
+
+[imgid1]: images/img2.jpg
+
+到目前为止，markdown还没有办法指定图片的宽高。如果你需要的话，你可以使用普通`<img>`标签。
+
+### 3. 与标准markdown的区别
+#### 3.1 删除线
+` ~~Mistaken text.~~ `
+
+显示为：
+
+~~Mistaken text.~~
+
+#### 3.2 代码块
+如果有一整块代码需要包围，可以使用两个```包括代码，例如：
+
+```
+x = 0
+x = 2 + 2
+what is x
+```
+
+#### 3.2 语法高亮
+代码块可以使用语法高亮！！在你的代码块中添加一个可选的语言标识符。
+```ruby
+require ´redcarpet´
+markdown = Redcarpet.new(¨Hello World!¨)
+puts markdown.to_html
+```
+能够支持的语法可以从 [这里](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml) 这里获得。
+
+#### 3.3 表格
+你可以创建表格，通过符号（-）分开第一行和其他行，通过（|）分开各个列：
+
+    First Header|second Header
+    ------------|-------------
+    Content Cell|Content Cell
+    Content Cell|Content Cell
+
+显示为：
+
+First Header|second Header
+------------|-------------
+Content Cell|Content Cell
+Content Cell|Content Cell
