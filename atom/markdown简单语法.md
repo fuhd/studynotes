@@ -147,16 +147,32 @@ _这个示例表示斜体_
 #### 2.3 代码
 如果要标记一小段行内代码，你可以反引号把它包起来（｀），例如：
 
+    User the `printf()` function.
+
+显示为：
+
 User the `printf()` function.
 
 如果要在代码区段内插入反引号，你可以用多个反引号来开启和结束代码区段：
+
+    ``There is a literal backtick (`) here.``
+
+显示为：
 
 ``There is a literal backtick (`) here.``
 
 代码区段的起始和结束端都可以放入一个空白，起始端后面一个，结束端前面一个，这样你就可以在区段的一开
 始就插入反引号：
 
+    `` ` ``
+
+显示为：
+
 `` ` ``
+
+    `` `javascript` ``
+
+显示为：
 
 `` `javascript` ``
 
@@ -168,7 +184,8 @@ Please don´t use any `<blink>` tags.
 markdown使用两种方式标记图片：行内式和参考式。
 
 **行内式：**
-`![示例图片1](images/img1.jpg)`
+
+    ![示例图片1](images/img1.jpg)
 
 显示为：
 
@@ -178,47 +195,52 @@ markdown使用两种方式标记图片：行内式和参考式。
 
 **参考式：**
 
-`![示例图片2][imgid1]`
-
-`[imgid1]: images/img2.jpg`
+    ![示例图片2][imgid1]
+    [imgid1]: images/img2.jpg
 
 显示为：
 
 ![示例图片2][imgid1]
-
 [imgid1]: images/img2.jpg
 
 到目前为止，markdown还没有办法指定图片的宽高。如果你需要的话，你可以使用普通`<img>`标签。
 
 ### 3. 与标准markdown的区别
 #### 3.1 删除线
-` ~~Mistaken text.~~ `
+
+    ~~Mistaken text.~~
 
 显示为：
 
 ~~Mistaken text.~~
 
 #### 3.2 代码块
+
 如果有一整块代码需要包围，可以使用两个```包括代码，例如：
 
     ```
     x = 0
     x = 2 + 2
     what is x
-    ``
+    ``｀
+
 #### 3.2 语法高亮
 代码块可以使用语法高亮！！在你的代码块中添加一个可选的语言标识符。示例：
+
     ```ruby
     require ´redcarpet´
     markdown = Redcarpet.new(¨Hello World!¨)
     puts markdown.to_html
     ```
+
 显示为：
+
 ```ruby
 require ´redcarpet´
 markdown = Redcarpet.new(¨Hello World!¨)
 puts markdown.to_html
 ```
+
 能够支持的语法可以从 [这里](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml) 这里获得。
 
 #### 3.3 表格
