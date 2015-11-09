@@ -146,12 +146,12 @@ what is x
 ```
 
 #### 3.2 语法高亮
-代码块可以使用语法高亮！！在你的代码块中添加一个可选的语言标识符。
-```ruby
-require ´redcarpet´
-markdown = Redcarpet.new(¨Hello World!¨)
-puts markdown.to_html
-```
+代码块可以使用语法高亮！！在你的代码块中添加一个可选的语言标识符。示例：
+    ```ruby
+    require ´redcarpet´
+    markdown = Redcarpet.new(¨Hello World!¨)
+    puts markdown.to_html
+    ```
 能够支持的语法可以从 [这里](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml) 这里获得。
 
 #### 3.3 表格
