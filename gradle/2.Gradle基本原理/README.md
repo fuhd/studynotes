@@ -10,6 +10,6 @@ Gradle基本原理
 + [7.理解本地依赖缓存](7.理解本地依赖缓存.md)
 + [8.解决依赖问题](8.解决依赖问题.md)
 + [9.拾遗之java插件与war插件的依赖配置](9.拾遗之java插件与war插件的依赖配置.md)
-+ [10.拾遗之org.hidetake:gradle-ssh-plugin插件](10.拾遗之org.hidetake:gradle-ssh-plugin插件.md)
++ [10.拾遗之org.hidetake:gradle-ssh-plugin插件](10.拾遗之gradle-ssh-plugin插件.md)
 + [11.拾遗之org.akhikhl.gretty插件](11.拾遗之org.akhikhl.gretty插件.md)
 + [12.拾遗之资源过滤](12.拾遗之资源过滤.md)
