@@ -27,3 +27,7 @@ Vert.x3架构
 每个标准verticle实例中的`event handler`总是在一个固定的事件循环线程中被回调。**因为在固定的单线程中运行，
 一定程度上避免了竞争条件和死锁**。标准verticle（更确切的说是`verticle event handler`中的 **回调方法**）
 不能阻塞事件循环。
+
+`worker verticle`在background worker线程池中执行，该线程池的大小缺省为 **40**。`worker verticle`
+又可分成两种，一种是 **多线程`worker verticle`**，一个多线程`worker verticle`实例可在多个worker线程中并发执行；
+另一种是 **单线程`worker verticle`**，在同一时间只能有一个线程执行（串行执行），但在不同时间可被不同线程执行。
