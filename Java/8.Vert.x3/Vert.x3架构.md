@@ -31,3 +31,7 @@ Vert.x3架构
 `worker verticle`在background worker线程池中执行，该线程池的大小缺省为 **40**。`worker verticle`
 又可分成两种，一种是 **多线程`worker verticle`**，一个多线程`worker verticle`实例可在多个worker线程中并发执行；
 另一种是 **单线程`worker verticle`**，在同一时间只能有一个线程执行（串行执行），但在不同时间可被不同线程执行。
+
+#### Event Bus
+`event bus`可理解为一个分布式消息队列系统，支持 **点对点（p2p）**，**发布/订阅（topic）**，**请求/响应** 模式。
+`verticle`实例之间的事件均通过`event bus`进行传递。这些`verticle`实例可分布在不同的JVM或不同机器上。
