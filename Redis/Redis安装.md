@@ -25,7 +25,7 @@ make && make install
 ```
 其间有很多步骤要设置，只要一路默认确定即可！！！！
 
-### 启动与停止
+#### 启动与停止
 可以使用这两个命令进行控制：
 ```powershell
 service redis_6379 start
