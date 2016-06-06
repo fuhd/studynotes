@@ -17,6 +17,6 @@ tar -xvf redis-3.2.0.tar.gz
 cd redis-3.2.0
 make && make install
 ```
-执行`make install`。会将make编译生成的可执行文件拷贝到`/usr/local/bin`目录下!!!
+执行`make install`会将make编译生成的可执行文件拷贝到`/usr/local/bin`目录下!!!
 
 另外，在源代码目录的`util`子目录下有一个`install_server.sh`命令，运行它可以 **配置Redis随系统启动**。
