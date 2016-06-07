@@ -31,3 +31,24 @@ make && make install
 service redis_6379 start
 service redis_6379 stop
 ```
+
+### 在Ubuntu16.04中安装Redis最新版本
+#### 下载源代码
+```powershell
+wget http://download.redis.io/releases/redis-3.2.0.tar.gz
+```
+#### 解压，编译源代码并安装
+```powershell
+tar -xvf redis-3.2.0.tar.gz
+cd redis-3.2.0
+make && sudo make install
+sudo ./utils/install_server.sh
+```
+**注意**：我在自己开发笔记本上安装的，非Root帐号，所以用了`sudo`!
+
+#### 启动与停止
+可以使用这两个命令进行控制：
+```powershell
+service redis_6379 start
+service redis_6379 stop
+```
