@@ -11,3 +11,6 @@ Scala-2.11.8
 
 ### Spark on YARN版本
 Spark2.0.0
+
+### Hive版本
+Hive2.3.2
