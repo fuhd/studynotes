@@ -10,4 +10,4 @@ hadoop-2.9.0
 Scala-2.11.8
 
 ### Spark on YARN版本
-Spark2.0.0
+Spark-2.0.0
