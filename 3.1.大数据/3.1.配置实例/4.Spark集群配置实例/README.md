@@ -11,3 +11,6 @@ Scala-2.11.8
 
 ### Spark版本（基于Spark on YARN模式）
 Spark-2.0.0
+
+### Maven版本
+Maven-3.5.0
