@@ -9,7 +9,7 @@ hadoop-2.9.0
 ### Scala版本
 Scala-2.11.8
 
-### Spark版本（spark on yarn without hive）
+### Spark版本（spark on yarn模式）
 Spark-2.0.0
 
 ### Maven版本
