@@ -10,4 +10,14 @@ hadoop-2.9.0
 Scala-2.11.8
 
 ### Spark版本（spark on yarn模式）
-Spark-2.0.0
+Spark-2.2.1
+
+```
+注：
+Spark-2.2.1中，依赖包的版本：
+hadoop-2.7.3
+scala-2.11.8
+java1.8+
+
+这里我们使用hadoop-2.9.0版本
+```
