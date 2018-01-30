@@ -20,4 +20,5 @@ scala-2.11.8
 java1.8+
 
 这里我们使用hadoop-2.9.0版本
+另外，Spark-2.2.1中Spark-sql依赖hive版本是1.2.1
 ```
