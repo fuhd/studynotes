@@ -1,2 +1,2 @@
-Cloudera Manager，Cloudera Navigator和CDH5的配置要求
+Cloudera Manager，Cloudera Navigator和CDH5配置要求
 ================================================================================
