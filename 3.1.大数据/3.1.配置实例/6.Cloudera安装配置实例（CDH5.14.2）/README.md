@@ -10,7 +10,7 @@ Cloudera安装配置实例（CDH5.14.2）
 | Cloudera Manager | 5.14.2 |
 
 
-### cloudera CDH中需要安装的组件
+### Cloudera CDH中需要安装的组件
 注：下面列出来的组件是根据我自身需要选择的。
 
 #### 必需安装的组件
