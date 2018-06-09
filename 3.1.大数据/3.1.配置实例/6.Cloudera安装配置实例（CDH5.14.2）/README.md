@@ -8,3 +8,24 @@ Cloudera安装配置实例（CDH5.14.2）
 | CentOS | 7.4 64位 |
 | JDK | 1.7 |
 | Cloudera Manager | 5.14.2 |
+
+## cloudera CDH中需要安装的组件
+
+### 必需安装的组件
++ HDFS                                          
++ YARN                                          
++ MapReduce                                    
++ ZooKeeper                                     
++ Hive                                          
++ Hue                                           
++ Oozie                                         
++ Sqoop1                                        
++ Impala                                        
+
+### 按需安装的组件
++ Spark
++ HBase
++ Flume
++ Kafka
++ Pig
++ solr clouderasearch
