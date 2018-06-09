@@ -28,7 +28,7 @@ CDH中包含的灵活，可扩展且强大的存储系统。这 **消除了跨�
 API，您可以使用它来获取集群运行状况信息和指标，以及配置Cloudera Manager。
 
 #### Cloudera Navigator
-CDH平台的端到端数据管理和安全性管理。Cloudera Navigator Data Management使管理员，数据管理
-员和分析人员能够在Hadoop中探索大量的数据集合。Cloudera Navigator加密和简化加密密钥的存储和管
-理。Cloudera Navigator中强大的审计，数据管理，沿袭管理，生命周期管理和加密密钥管理功能使企业能
-够遵守严格的合规性和法规要求。
+**CDH平台的端到端数据管理和安全性管理**。Cloudera Navigator Data Management使管理员，数据
+管理员和分析人员能够在Hadoop中探索大量的数据集合。Cloudera Navigator加密和简化加密密钥的存储
+和管理。Cloudera Navigator中强大的审计，数据管理，沿袭管理，生命周期管理和加密密钥管理功能使企
+业能够遵守严格的合规性和法规要求。
