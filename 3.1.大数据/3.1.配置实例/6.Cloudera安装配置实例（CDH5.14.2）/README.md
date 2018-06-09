@@ -31,3 +31,4 @@ Cloudera安装配置实例（CDH5.14.2）
 + Kafka
 + Pig
 + solr clouderasearch
++ kudu
