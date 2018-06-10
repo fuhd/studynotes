@@ -86,6 +86,35 @@ Spark各自都具有网关角色，**为其客户提供访问其各自服务的�
 
 ![角色实例](img/3.png)
 
+### 2.架构
+如下所示，Cloudera Manager的核心是Cloudera Manager Server。服务器承载管理控制台Web服务器和应用
+程序逻辑，负责安装软件，配置，启动和停止服务以及管理运行服务的群集。
+
+![架构](img/4.png)
+
+Cloudera Manager Server与其他几个组件一起工作：
++ **代理** - 安装在每台主机上。代理负责启动和停止进程，解压缩配置，触发安装以及监视主机。
++ **管理服务** - 由一组执行各种监视，警报和报告功能的角色组成的服务。
++ **数据库** - 存储配置和监视信息。通常，多个逻辑数据库在一个或多个数据库服务器上运行。例如，
+Cloudera Manager Server和监控角色使用不同的逻辑数据库。
++ **Cloudera存储库** - 由Cloudera Manager分发的软件存储库。
++ **客户端** - 是与服务器交互的接口：
+  - **管理控制台** - 管理员用于管理集群和Cloudera Manager的基于Web的用户界面。
+  - **API** - 与开发人员创建自定义Cloudera Manager应用程序的API。
+
+#### 2.1.心跳
+心跳是Cloudera Manager中的主要通信机制。默认情况下，代理 **每15秒** 向Cloudera Manager服务器发送
+检测信号。但是，为了减少用户等待时间，当状态发生变化时，频率会增加。
+
+在心跳交换过程中，代理通知Cloudera Manager Server其活动。 而Cloudera Manager Server则会响应代理
+应执行的操作。代理和Cloudera Manager Server最终都会进行一些调整。例如，如果您启动服务，代理将尝试启动
+相关流程; 如果某个进程无法启动，Cloudera Manager Server会将启动命令标记为失败。
+
+#### 2.2.状态管理
+Cloudera Manager Server维护集群的状态。此状态可以分为两类：“**模型**”和“**运行时**”，两者均存储在
+Cloudera Manager Server数据库中。
+
+![状态管理](img/5.png)
 
 
 
@@ -120,9 +149,4 @@ Spark各自都具有网关角色，**为其客户提供访问其各自服务的�
 
 
 
-
-
-
-
-
-2222
+dd
