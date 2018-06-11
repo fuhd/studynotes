@@ -162,7 +162,36 @@ HDFS服务具有为服务角色定义的以下角色组：
 + 轻松更改一组主机上不同服务的角色配置 - 这对于快速切换整个群集的配置以适应不同的工作负载或用户非常有用。
 
 #### 4.3.服务器和客户端配置
+管理员有时会惊讶于修改 **/etc/hadoop/conf** 然后重新启动HDFS不起作用。这是因为Cloudera Manager启动
+的服务实例不会从默认位置读取配置。以HDFS为例，当不受Cloudera Manager管理时，每个主机通常会有一个HDFS配置，
+位于/etc/hadoop/conf/hdfs-site.xml。运行在同一主机上的服务器端守护进程和客户端都将使用相同的配置。
 
+**Cloudera Manager区分服务器和客户端配置**。对于HDFS，文件/etc/hadoop/conf/hdfs-site.xml只包含与
+HDFS客户端相关的配置。也就是说，默认情况下，如果您运行需要与Hadoop通信的程序，它将从该目录获取NameNode和
+JobTracker的地址以及其他重要配置。对/etc/hbase/conf和/etc/hive/conf采取了类似的方法。
+相比之下，HDFS角色实例（例如NameNode和DataNode）从 **/var/run/cloudera-scm-agent/process/unique-process-name**
+下的专用per-process目录获取其配置。为每个进程分配自己的专用执行和配置环境，允许Cloudera Manager独立控制
+每个进程。例如，以下是一个示例879-hdfs-NAMENODE进程目录的内容：
+```shell
+$ tree -a /var/run/cloudera-scm-Agent/process/879-hdfs-NAMENODE/
+  /var/run/cloudera-scm-Agent/process/879-hdfs-NAMENODE/
+  ├── cloudera_manager_Agent_fencer.py
+  ├── cloudera_manager_Agent_fencer_secret_key.txt
+  ├── cloudera-monitor.properties
+  ├── core-site.xml
+  ├── dfs_hosts_allow.txt
+  ├── dfs_hosts_exclude.txt
+  ├── event-filter-rules.json
+  ├── hadoop-metrics2.properties
+  ├── hdfs.keytab
+  ├── hdfs-site.xml
+  ├── log4j.properties
+  ├── logs
+  │   ├── stderr.log
+  │   └── stdout.log
+  ├── topology.map
+  └── topology.py
+```
 
 
 
