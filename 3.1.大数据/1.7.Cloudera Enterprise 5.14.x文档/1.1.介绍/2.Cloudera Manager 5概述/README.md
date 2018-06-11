@@ -293,6 +293,17 @@ parcel部署路径，因为这些链接可能会导致区分这两个路径的�
 Puppet。或者，**如果群集没有互联网连接，然后让Cloudera Manager将parcels分发到群集，则可以手动将该parcels
 下载到Cloudera Manager Server**。
 
+### 7.主机管理
+Cloudera Manager提供了几个功能来管理Hadoop集群中的主机。首次运行Cloudera Manager管理控制台时，您可以搜索
+要添加到群集的主机，并且一旦选择了主机，就可以将CDH角色的分配映射到主机。Cloudera Manager会自动将作为托管主机
+参与集群所需的所有软件部署到主机：JDK，Cloudera Manager Agent，CDH，Impala，Solr等。
+
+一旦服务部署并运行，管理控制台中的主机区域将显示群集中托管主机的整体状态。提供的信息包括在主机上运行的CDH版本，
+主机所属的集群以及在主机上运行的角色数量。Cloudera Manager提供操作来管理参与主机的生命周期以及添加和删除主机。
+Cloudera管理服务 主机监控器角色 执行运行状况测试并收集主机指标，以便您监控主机的运行状况和性能。
+
+### 8.资源管理
+
 
 
 
