@@ -221,7 +221,26 @@ Cloudera Manager可以在集群内部署客户端配置; 每个适用的服务�
 
 ![网关角色](img/7.png)
 
+### 5.流程管理
+在非Cloudera Manager受管集群中，您很可能使用init脚本启动角色实例进程，例如，service hadoop-hdfs-datanode start。
+Cloudera Manager不对其管理的守护程序使用init脚本; 在Cloudera Manager受管集群中，使用init脚本启动和停止服务
+将不起作用。
 
+**在Cloudera Manager受管集群中，只能使用Cloudera Manager启动或停止角色实例进程**。Cloudera Manager使用称
+为 **supervisord** 的开源过程管理工具，该工具启动进程，负责重定向日志文件，通知进程失败，将调用进程的有效用户标
+识设置为正确的用户等等。Cloudera Manager支持自动重启崩溃进程。如果启动后它的进程崩溃，它还会标记具有不良健康标志的
+角色实例。
+
+停止Cloudera Manager Server和Cloudera Manager Agents不会降低您的服务; 任何正在运行的角色实例都在运行。
+
+代理在启动时由init.d启动。它反过来联系Cloudera Manager服务器并确定应该运行哪些进程。代理作为Cloudera Manager
+的主机监控的一部分进行监控：如果代理停止心跳，主机会被标记为运行状况不佳。
+
+代理的主要职责之一是启动和停止流程。当代理程序从服务器检测信号中检测到新进程时，代理程序会在 **/var/run/cloudera-scm-agent**
+中为其创建一个目录，并解压配置。然后它会联系supervisord，它开始这个过程。
+
+这些行为强化了一个重要的观点：Cloudera Manager流程永远不会独行。换句话说，一个进程不仅仅是exec()的参数 -
+它还包括配置文件，需要创建的目录以及其他信息。
 
 
 
