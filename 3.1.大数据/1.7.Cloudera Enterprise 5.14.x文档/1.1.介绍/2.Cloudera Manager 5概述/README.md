@@ -286,6 +286,13 @@ parcel部署路径，因为这些链接可能会导致区分这两个路径的�
 启动，以最小的服务中断切换到新版本。在集群中创建新版本时，您的集群可以继续在现有的已安装组件上运行，而不会影响当前
 的操作。由于版本之间的重大更改，**主要版本升级（例如CDH 4到CDH 5）需要全面重新启动服务**。最后，您可以同时升级
 单个parcels或多个parcels。
++ **升级管理** - Cloudera Manager管理CDH版本升级中的所有步骤。通过packages，Cloudera Manager只能帮助
+初始安装。
++ **其他组件** - parcels不限于CDH。Impala，Cloudera Search，LZO，Apache Kafka和附加服务包也可用。
++ **与其他分发工具的兼容性** - Cloudera Manager可与您用于下载和分发的其他工具一起使用。例如，你可以使用
+Puppet。或者，**如果群集没有互联网连接，然后让Cloudera Manager将parcels分发到群集，则可以手动将该parcels
+下载到Cloudera Manager Server**。
+
 
 
 
