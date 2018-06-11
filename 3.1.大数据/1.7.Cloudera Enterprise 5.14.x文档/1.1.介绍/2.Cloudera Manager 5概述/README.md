@@ -110,7 +110,7 @@ Cloudera Manager Server和监控角色使用不同的逻辑数据库。
 应执行的操作。代理和Cloudera Manager Server最终都会进行一些调整。例如，如果您启动服务，代理将尝试启动
 相关流程; 如果某个进程无法启动，Cloudera Manager Server会将启动命令标记为失败。
 
-#### 2.2.状态管理
+### 3.状态管理
 Cloudera Manager Server维护集群的状态。此状态可以分为两类：“**模型**”和“**运行时**”，两者均存储在
 Cloudera Manager Server数据库中。
 
