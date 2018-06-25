@@ -4,3 +4,4 @@ Cloudera安装配置实例（CDH5.15.0）
 + CentOS7+
 + JDK1.8u162
 + MySQL5.7
++ mysql-connector-java-5.1.46.tar.gz
