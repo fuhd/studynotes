@@ -6,4 +6,4 @@ Cloudera安装配置实例（CDH5.15.0）
 + CDH5.15.0
 + CentOS7.4（文件系统：XFS）
 + MySQL5.7
-+ JDK1.8u162
++ Oracle JDK1.8u162
