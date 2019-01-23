@@ -14,8 +14,51 @@ let variable: i32 = 100;
 那么这个类型描述完全可以省略不写。Rust一开始的设计就考虑了类型自动推导功能，因此类型后置的语法更
 合适**。
 
+## 3.模式解构
+**`let`语句不光是局部变量声明语句，而且具有`pattern destructure`（模式解构）的功能**。
 
+**Rust中声明变量缺省是“只读”的**，比如如下程序：
+```rust
+fn main() {
+    let x = 5;
+    x = 10;
+}
+```
+会得到这样的编译错误：
+```
+error[E0384]: cannot assign twice to immutable variable `x`
+ --> src/main.rs:3:5
+  |
+2 |     let x = 5;
+  |         -
+  |         |
+  |         first assignment to `x`
+  |         help: make this binding mutable: `mut x`
+3 |     x = 10;
+  |     ^^^^^^ cannot assign twice to immutable variable
 
+error: aborting due to previous error
+```
+**如果我们需要让变量是可写的，那么需要使用`mut`关键字**：
+```rust
+fn main() {
+    let mut x = 5;
+    x = x * 2;
+    println!("{}", x)
+}
+```
+此时，变量`x`才是可读写的。
+
+**实际上，`let`语句在此处引入了一个模式解构，我们不能把`let mut`视为一个组合，而应该将`mut x`
+视为一个组合**。
+
+**`mut x`是一个“模式”**，我们还可以用这种方式同时声明多个变量：
+```rust
+let (mut a, mut b) = (1, 2);
+let Point(x: ref a, y: ref b) = p;
+```
+其中，**赋值号左边的部分是一个“模式”，每一行代码是对`tuple`的模式解构，第二行代码是对结构体的模
+式解构**。所以，在Rust中，一般把声明的局部变量并被始化的语句称为“变量绑定”，
 
 
 
