@@ -98,36 +98,23 @@ fn test(condition: bool) {
 个特殊语法，如`r#self`，让用户可以以关键字作为普通标识符**。这只是为了应付某些特殊情况时迫不得
 已的做法。
 
+**Rust里面的下划线是一个特殊的标识符，在编译器内部它是被特殊处理的。它跟其他标识符有许多重要区别**。
+比如，以下代码就编译不过：
+```rust
+fn main() {
+    let _ = "hello";
+    println!("{}", _);
+}
+```
+报出异常信息：
+```
+error: expected expression, found reserved identifier `_`
+ --> src/main.rs:3:20
+  |
+3 |     println!("{}", _);
+  |                    ^ expected expression
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-dd
+error: aborting due to previous error
+```
+**我们不能在表达式中使用下划线来作为普通变量使用。下划线表达的含义是“忽略这个变量绑定，后面不会
+再用到了”**。在后面讲 **析构** 的时候，还会提到这一点。
