@@ -53,8 +53,29 @@ fn main() {
 let (mut a, mut b) = (1, 2);
 let Point(x: ref a, y: ref b) = p;
 ```
-其中，**赋值号左边的部分是一个“模式”，每一行代码是对`tuple`的模式解构，第二行代码是对结构体的模
-式解构**。所以，在Rust中，一般把声明的局部变量并被始化的语句称为“变量绑定”，
+其中，**赋值号左边的部分是一个“模式”，第一行代码是对`tuple`的模式解构，第二行代码是对结构体的模
+式解构**。所以，**在Rust中，一般把声明的局部变量并被始化的语句称为“变量绑定”，强调的是“绑定”的
+含义**，与`C/C++`中的“赋值初始化”语句有所区别。
+
+**Rust中，每个变量必须被合理初始化之后才能被使用。使用未初始化变量这样的错误，在Rust中是不可能
+出现的（利用`unsafe`做`hack`除外）**。如下示例是不能编译通过的：
+```rust
+fn main() {
+    let x: i32;
+    println!("{}", x);
+}
+```
+错误信息为：
+```
+error[E0381]: borrow of possibly uninitialized variable: `x`
+ --> src/main.rs:3:20
+  |
+3 |     println!("{}", x);
+  |                    ^ use of possibly uninitialized `x`
+
+error: aborting due to previous error
+```
+**编译器会帮我们做一个执行路径的静态分析，确保变量在使用前一定被初始化**。
 
 
 
