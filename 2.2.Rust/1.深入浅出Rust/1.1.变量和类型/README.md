@@ -76,6 +76,21 @@ error[E0381]: borrow of possibly uninitialized variable: `x`
 error: aborting due to previous error
 ```
 **编译器会帮我们做一个执行路径的静态分析，确保变量在使用前一定被初始化**。
+```rust
+fn test(condition: bool) {
+    //声明x，不必使用mut修饰
+    let x: i32;
+    if condition {
+        //初始化x，不需要x是mut的，因为这是初始化，不是修改
+        x = 1;
+        println!("{}", x);
+    }
+    //如果条件不满足，x没有被初始化
+    //但是没有关系，只要这里不使用x就没事
+}
+```
+**类型没有“默认构造函数”，变量没有”默认值“。对于`let x: i32;`，如果没有显式赋值，它就没有被
+始化，不要想当然地以为它的值是0**。
 
 
 
