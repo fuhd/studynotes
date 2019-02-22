@@ -6,22 +6,3 @@ Apache Kylin概述
 Apache Kylin是 **中国人** 主导的Apache顶级开源项目，在开源社区有世界级的影响力。
 
 本书内容以 **Apache Kylin v1.5** 为基础。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-ddd
