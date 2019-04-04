@@ -3,4 +3,4 @@
 要在群集中的单个主机上安装Ambari服务器，请完成以下步骤：
 + 下载Ambari存储库
 + 安装Ambari服务
-+ 设置Ambari服务
++ 设置Ambari服务器
