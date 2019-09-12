@@ -11,3 +11,17 @@ PlayFramework
 + 类型安全；
 + IDE支持Eclipse和IntelliJ IDEA；
 
+## 3.可预测的比例
+在内部，Play使用构建在Akka之上的完全异步模型。 结合无状态，Play简单且可预测。
++ 无状态Web层；
++ 非阻塞I/O；
++ 构建在Akka之上；
++ 实时启用；
+
+## 4.现代网络和移动
+Play是为满足现代网络和移动应用程序的需求而构建的。
++ 默认为RESTful；
++ CoffeeScript的素材编译器，LESS等；
++ JSON是一等公民；
++ Websockets，Comet，EventSource；
++ 广泛的NoSQL和大数据支持；
