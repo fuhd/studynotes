@@ -10,4 +10,18 @@ Hadoop和Spark中的逻辑回归：
 
 ![Hadoop和Spark中的逻辑回归](img/1.png)
 
-## 2. 
+## 2. 便于使用
+**使用Java，Scala，Python，R和SQL快速编写应用程序**。Spark提供了80多个高阶算子，可轻松构建并行
+应用程序。 您可以从Scala，Python，R和SQL Shell交互使用它。
+```python
+# Spark的Python DataFrame API通过自动模式推断读取JSON文件
+df = spark.read.json("logs.json") 
+df.where("age > 21").select("name.first").show()
+```
+
+## 3. 概论
+**结合使用SQL，流和复杂的分析**。Spark为包括SQL和DataFrames，用于机器学习的MLlib，GraphX和
+Spark Streaming的库提供了强大的支持。您可以在同一应用程序中无缝组合这些库。
+
+![概论](img/2.png)
+
