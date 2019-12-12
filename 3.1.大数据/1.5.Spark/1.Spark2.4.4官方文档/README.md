@@ -25,3 +25,10 @@ Spark Streaming的库提供了强大的支持。您可以在同一应用程序�
 
 ![概论](img/2.png)
 
+## 4. 无处不在
+**Spark可在Hadoop，Apache Mesos，Kubernetes，standalone或云中运行。它可以访问各种数据源**。
+您可以在EC2，Hadoop YARN，Mesos或Kubernetes上使用Standalone集群模式运行Spark。访问HDFS，
+Alluxio，Apache Cassandra，Apache HBase，Apache Hive和数百种其他数据源中的数据。
+
+![无处不在](img/3.png)
+
