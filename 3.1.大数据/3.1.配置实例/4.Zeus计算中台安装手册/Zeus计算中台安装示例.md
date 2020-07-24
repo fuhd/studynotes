@@ -109,6 +109,7 @@ mkdir -p /bigdata/zookeeper/data    #每台机器都执行
 #设置服务ID作为集群中节点标识
 vi /bigdata/zookeeper/data/myid
 ```
+编辑:
 ```
 1
 ```
