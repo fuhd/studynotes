@@ -8,6 +8,7 @@ Cloudera安装配置实例（CDH5.13.0）
 + `/usr/lib64/cmf/`：Agent程序代码；
 + `/var/lib/cloudera-scm-server-db/data`：内嵌数据库目录；
 + `/usr/bin/postgres`：内嵌数据库程序；
++ `/etc/hadoop/conf`：Hadoop配置文件目录；
 + `/etc/cloudera-scm-agent/`：agent的配置目录；
 + `/etc/cloudera-scm-server/`：server的配置目录；
 + `/opt/cloudera/parcels/`：Hadoop相关服务安装目录；
