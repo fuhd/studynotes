@@ -15,3 +15,6 @@ Cloudera安装配置实例（CDH5.13.0）
 + `/opt/cloudera/parcel-cache/`：下载的服务软件包缓存数据；
 + `/etc/hadoop/*`：客户端配置文件目录；
 
+
+![内部结构](img/60.jpg)
+
